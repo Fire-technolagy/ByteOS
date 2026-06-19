@@ -1,6 +1,7 @@
 <p align="center">
   <img src="______  _   _)   _   _)  ______ BYTEOS.png" alt="ByteOS Logo" width="300">
 </p>
+
 # ByteOS
 
 ByteOS is a minimal, ultra-optimized x86 operating system written in 16-bit Assembly (`NASM`) designed to run completely inside a single 512-byte master boot record (MBR). 
@@ -23,6 +24,10 @@ Even though the final boot sector is structurally locked to 512 bytes due to leg
 * **Data, Strings & Buffers:** ~40 bytes
 * **Zero-Padding Alignment:** ~330 bytes
 * **Magic Boot Signature (`0xAA55`):** 2 bytes
+
+<p align="center">
+  <img src="https://github.com/Fire-technology/ByteOS/assets/2a110d3f-50a7-47c4-a9c1-09817a45169c" alt="Commands" width="718">
+</p>
 
 ## Command Utilities
 * `help` - Dispatches all currently registered internal OS utilities.
