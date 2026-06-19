@@ -21,10 +21,38 @@ Even though the final boot sector is structurally locked to 512 bytes due to leg
 * **Zero-Padding Alignment:** ~330 bytes
 * **Magic Boot Signature (`0xAA55`):** 2 bytes
 
-## Getting Started
+## Command Utilities
+* `help` - Dispatches all currently registered internal OS utilities.
+* `cls` - Flushes the terminal view buffers and recalibrates the text pointer matrix.
+* `time` - Pulls live, local time data straight from the host's motherboard hardware.
+* `info` - Queries current system platform metadata.
+* `reboot` - Instructs the underlying CPU to drop all runtime states and undergo a complete hard cycles restart.
 
-### Prerequisites
-You need an x86 assembler (`NASM`) and a processor emulator (`QEMU`). In WSL/Linux, install them via:
-```bash
-sudo apt update
-sudo apt install nasm qemu-system-x86
+---
+
+## How to Run the ByteOS ISO
+
+Since ByteOS is compiled into a standard hybrid bootable image (`byteos.iso`), it can be run instantly using modern virtualization software.
+
+### 1. Oracle VM VirtualBox
+1. Open VirtualBox and click **New** to create a virtual machine.
+2. Configure the basic settings:
+   * **Name:** ByteOS
+   * **Type:** Other
+   * **Version:** Other/Unknown (64-bit) or Other/Unknown (32-bit)
+3. Set the base memory (RAM) to something small (e.g., **64 MB** or **128 MB** is more than enough). Do **not** create a virtual hard disk (choose *Do not add a virtual hard disk*).
+4. Once the VM is created, select it and click **Settings** -> **Storage**.
+5. Click on the empty Optical Drive controller, look to the right side under *Attributes*, click the CD disk icon, and select **Choose a disk file...**.
+6. Select your downloaded `byteos.iso`.
+7. Click **OK** and hit **Start** to boot the OS.
+
+### 2. VMware Workstation Player / Pro
+1. Open VMware and select **Create a New Virtual Machine**.
+2. Choose **Installer disc image file (iso)**, click **Browse**, and select `byteos.iso`.
+3. VMware might say it cannot detect the operating system; click **Next**.
+4. Set the Guest Operating System type:
+   * **Guest OS:** Other
+   * **Version:** Other
+5. Name the virtual machine `ByteOS` and allocate the minimum allowed RAM/Disk configurations (you can choose to split/store the disk but you won't need it).
+6. Click **Finish**.
+7. Power on the virtual machine to watch ByteOS initialize directly into the custom gray TUI.
