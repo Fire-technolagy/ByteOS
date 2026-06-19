@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="______  _   _)   _   _)  ______ BYTEOS.png" alt="ByteOS Logo" width="300">
+</p>
 # ByteOS
 
 ByteOS is a minimal, ultra-optimized x86 operating system written in 16-bit Assembly (`NASM`) designed to run completely inside a single 512-byte master boot record (MBR). 
