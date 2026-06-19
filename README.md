@@ -26,7 +26,7 @@ Even though the final boot sector is structurally locked to 512 bytes due to leg
 * **Magic Boot Signature (`0xAA55`):** 2 bytes
 
 <p align="center">
-  <img src="https://github.com/Fire-technology/ByteOS/assets/2a110d3f-50a7-47c4-a9c1-09817a45169c" alt="Commands" width="718">
+  <img src="Screenshot 2026-06-19 140441.png" alt="Commands" width="718">
 </p>
 
 ## Command Utilities
